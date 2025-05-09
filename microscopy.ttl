@@ -1,0 +1,24 @@
+@prefix : <https://w3id.org/emmo/domain/microscopy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix emmo: <https://w3id.org/emmo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/emmo/domain/microscopy#> .
+
+<https://w3id.org/emmo/domain/microscopy> rdf:type owl:Ontology ;
+    owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.0.1> ;
+    owl:imports <https://w3id.org/emmo/1.0.0> ,
+    <https://w3id.org/emmo/domain/characterisation-methodology/1.0.0/chameo> ;
+    dcterms:contributor "SFI PhysMet"@en, "MatCHMaker"@en ;
+    dcterms:creator
+      "Jesper Friis (SINTEF)"@en ,
+      "Inga D. Konow (NTNU)"@en ,
+      "Elisabeth Thronsen (SINTEF)"@en ,
+      "Sigurd Wenner (SINTEF)"@en ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+    dcterms:title "Microstructure domain ontology"@en ;
+    owl:versionInfo "0.0.1"@en .
