@@ -73,9 +73,9 @@
                                                              owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
                                                              owl:someValuesFrom :EMMO_a4241c10_54af_4eed_9ba4_6f1becb3ae24
                                                            ] ;
-                                           skos:altLabel "A STEM technique where a diffraction pattern is acquired at each pixel."@en ,
-                                                         "ScanningPrecessionElectronDiffractionProcess"@en ;
-                                           skos:prefLabel "SPED"@en .
+                                           skos:altLabel "ScanningPrecessionElectronDiffractionProcess"@en ;
+                                           skos:prefLabel "SPED"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A STEM technique where a diffraction pattern is acquired at each pixel."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_3ec4a424_b44f_46bd_8ac2_d6bfbc69b154
@@ -97,8 +97,8 @@
                                                              owl:someValuesFrom :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c
                                                            ] ;
                                            skos:prefLabel "Imaging"@en ;
-                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Characterisation process that produces (often, but not necessary, 2-dimensional) images of the sample."@en ,
-                                                                                          "Imaging is typically contrasted to diffraction and spectroscopy."@en .
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Characterisation process that produces (often, but not necessary, 2-dimensional) images of the sample."@en ;
+                                           emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Imaging is typically contrasted to diffraction and spectroscopy."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_5942f8ee_640a_4a7b_849e_c5ed22fee55c
@@ -123,8 +123,8 @@
                                                              owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
                                                              owl:someValuesFrom :EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce
                                                            ] ;
-                                           skos:altLabel "Characterisation process that studies the absorption and emission of radiation from the sample."@en ;
-                                           skos:prefLabel "SpectroscopyProcess"@en .
+                                           skos:prefLabel "SpectroscopyProcess"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Characterisation process that studies the absorption and emission of radiation from the sample."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_6567dbdc_d049_4bc6_8076_cb1e0c007348
@@ -149,7 +149,8 @@
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_6ed54edb_b512_4687_b96f_d0c556ef0955
 :EMMO_6ed54edb_b512_4687_b96f_d0c556ef0955 rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationData> ;
-                                           skos:prefLabel "EDSMap"@en .
+                                           skos:prefLabel "EDSMap"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The characterisation result of an ECS process."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_769aa551_164a_48e4_b63e_c708c5aecbee
@@ -167,8 +168,8 @@
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce
 :EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce rdf:type owl:Class ;
                                            rdfs:subClassOf emmo:EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e ;
-                                           skos:altLabel "The characterisation result of an spectroscopy process."@en ;
-                                           skos:prefLabel "Spectrum"@en .
+                                           skos:prefLabel "Spectrum"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The characterisation result of an spectroscopy process."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_97d368c5_133a_4d95_8d58_493b4c6e55bd
@@ -182,8 +183,8 @@
 :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c rdf:type owl:Class ;
                                            rdfs:subClassOf emmo:EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e ,
                                                            <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationData> ;
-                                           skos:altLabel "The characterisation result of an imaging process."@en ;
-                                           skos:prefLabel "Image"@en .
+                                           skos:prefLabel "Image"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The characterisation result of an imaging process."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_a4241c10_54af_4eed_9ba4_6f1becb3ae24
@@ -205,8 +206,8 @@
 :EMMO_b088f2b9_1ca6_452b_8a58_a54f917ec9e2 rdf:type owl:Class ;
                                            rdfs:subClassOf :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c ;
                                            skos:altLabel "DFImage"@en ;
-                                           skos:prefLabel "DarkFieldImage"@en ,
-                                                          "Image produced from dark field imaging."@en .
+                                           skos:prefLabel "DarkFieldImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Image produced from dark field imaging."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_b27794ac_662b_4255_b364_acad4ed531a6
@@ -257,10 +258,10 @@
                                                              owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
                                                              owl:someValuesFrom :EMMO_5942f8ee_640a_4a7b_849e_c5ed22fee55c
                                                            ] ;
-                                           skos:altLabel "A STEM technique which produces an annular dark field image formed by very high angle, incoherently scattered electrons."@en ,
-                                                         "HAADFSTEM"@en ,
+                                           skos:altLabel "HAADFSTEM"@en ,
                                                          "HighAngleAnnularDarkFieldScanningTransmissionElectronMicroscopyProcess"@en ;
-                                           skos:prefLabel "HAADF"@en .
+                                           skos:prefLabel "HAADF"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A STEM technique which produces an annular dark field image formed by very high angle, incoherently scattered electrons."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_cbcecf48_040d_403b_b812_047124855553
@@ -370,8 +371,8 @@
 :EMMO_fec21a9f_99ed_4d35_b63f_34cac3044cdf rdf:type owl:Class ;
                                            rdfs:subClassOf emmo:EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e ,
                                                            <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationData> ;
-                                           skos:altLabel "The characterisation result of an diffraction process."@en ;
-                                           skos:prefLabel "DiffractionPattern"@en .
+                                           skos:prefLabel "DiffractionPattern"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The characterisation result of an diffraction process."@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
