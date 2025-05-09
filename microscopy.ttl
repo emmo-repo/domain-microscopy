@@ -3,23 +3,375 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix emmo: <https://w3id.org/emmo#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix emmo: <https://w3id.org/emmo#> .
-@prefix chameo: <https://w3id.org/emmo/domain/characterisation-methodology/chameo#> .
 @base <https://w3id.org/emmo/domain/microscopy#> .
 
 <https://w3id.org/emmo/domain/microscopy> rdf:type owl:Ontology ;
-    owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.0.1> ;
-    owl:imports <https://w3id.org/emmo/1.0.0> ,
-    <https://w3id.org/emmo/domain/characterisation-methodology/1.0.0/chameo> ;
-    dcterms:contributor "SFI PhysMet"@en, "MatCHMaker"@en ;
-    dcterms:creator
-      "Jesper Friis (SINTEF)"@en ,
-      "Inga D. Konow (NTNU)"@en ,
-      "Elisabeth Thronsen (SINTEF)"@en ,
-      "Sigurd Wenner (SINTEF)"@en ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
-    dcterms:title "Microstructure domain ontology"@en ;
-    owl:versionInfo "0.0.1"@en .
+                                           owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.0.1> ;
+                                           owl:imports <https://w3id.org/emmo/1.0.0> ,
+                                                       <https://w3id.org/emmo/domain/characterisation-methodology/1.0.0/chameo> ;
+                                           dcterms:contributor "MatCHMaker"@en ,
+                                                               "SFI PhysMet"@en ;
+                                           dcterms:creator "Elisabeth Thronsen (SINTEF)"@en ,
+                                                           "Inga D. Konow (NTNU)"@en ,
+                                                           "Jesper Friis (SINTEF)"@en ,
+                                                           "Sigurd Wenner (SINTEF)"@en ;
+                                           dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode"@en ;
+                                           dcterms:title "Microstructure domain ontology"@en ;
+                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "dom" ;
+                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/emmo/domain/microscopy" ;
+                                           owl:versionInfo "0.0.1"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/emmo/domain/electrochemistry#electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59
+<https://w3id.org/emmo/domain/electrochemistry#electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf emmo:EMMO_a96e2152_40e7_409c_a53a_fdb9f141eb6a ;
+                                                                                                      rdfs:isDefinedBy "https://w3id.org/emmo/domain/electrochemistry"^^xsd:anyURI ;
+                                                                                                      skos:prefLabel "Electrolyte"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_00e46f1b_3f68_41d3_a2b5_be9e73f39484
+:EMMO_00e46f1b_3f68_41d3_a2b5_be9e73f39484 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_c0e1faf2_5e21_4064_b181_c9fcab59e865 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_cbcecf48_040d_403b_b812_047124855553
+                                                           ] ;
+                                           skos:altLabel "SelectedAreaDiffractionProcess"@en ;
+                                           skos:prefLabel "SADProcess"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A diffraction process where the pattern is produced from a selected area of the sample."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_04271d77_293d_4bd5_af84_b0d6ded55286
+:EMMO_04271d77_293d_4bd5_af84_b0d6ded55286 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_f92e72fc_598b_4d67_8db9_3b659213c995 ;
+                                           skos:prefLabel "STEMImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An image produced by STEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_23ec1502_2979_4866_bfcd_c22acf97097d
+:EMMO_23ec1502_2979_4866_bfcd_c22acf97097d rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_b088f2b9_1ca6_452b_8a58_a54f917ec9e2
+                                                           ] ;
+                                           skos:prefLabel "DarkFieldImaging"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An imaging technique where the image is produced from a diffracted beam."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_3240d965_3f5f_4dac_870f_c029e36b1808
+:EMMO_3240d965_3f5f_4dac_870f_c029e36b1808 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6d52e4e8_8507_4e6c_87ec_64533adec1c0 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_a4241c10_54af_4eed_9ba4_6f1becb3ae24
+                                                           ] ;
+                                           skos:altLabel "A STEM technique where a diffraction pattern is acquired at each pixel."@en ,
+                                                         "ScanningPrecessionElectronDiffractionProcess"@en ;
+                                           skos:prefLabel "SPED"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_3ec4a424_b44f_46bd_8ac2_d6bfbc69b154
+:EMMO_3ec4a424_b44f_46bd_8ac2_d6bfbc69b154 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce ;
+                                           skos:prefLabel "EELSSpectrum"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A spectrum procuded by EELS."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d
+:EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementProcess> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c
+                                                           ] ;
+                                           skos:prefLabel "Imaging"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Characterisation process that produces (often, but not necessary, 2-dimensional) images of the sample."@en ,
+                                                                                          "Imaging is typically contrasted to diffraction and spectroscopy."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_5942f8ee_640a_4a7b_849e_c5ed22fee55c
+:EMMO_5942f8ee_640a_4a7b_849e_c5ed22fee55c rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_04271d77_293d_4bd5_af84_b0d6ded55286 ;
+                                           skos:prefLabel "HAADFImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An image produced by HAADF-STEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_5cda4466_c377_4f28_8ab3_1041e7826727
+:EMMO_5cda4466_c377_4f28_8ab3_1041e7826727 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementProcess> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_39c3815d_8cae_4c8f_b2ff_eeba24bec455 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Spectrometry>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce
+                                                           ] ;
+                                           skos:altLabel "Characterisation process that studies the absorption and emission of radiation from the sample."@en ;
+                                           skos:prefLabel "SpectroscopyProcess"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_6567dbdc_d049_4bc6_8076_cb1e0c007348
+:EMMO_6567dbdc_d049_4bc6_8076_cb1e0c007348 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c ;
+                                           skos:prefLabel "SEMImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An image produced by SEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_6d52e4e8_8507_4e6c_87ec_64533adec1c0
+:EMMO_6d52e4e8_8507_4e6c_87ec_64533adec1c0 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_f840ce1c_9f74_4a22_a305_30b82e2a3cb5 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_04271d77_293d_4bd5_af84_b0d6ded55286
+                                                           ] ;
+                                           skos:altLabel "ScanningTransmissionEletronMicroscopyProcess"@en ;
+                                           skos:prefLabel "STEM"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A TEM characterisation process that produces images of a sample by scanning the surface with a focused beam of electrons."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_6ed54edb_b512_4687_b96f_d0c556ef0955
+:EMMO_6ed54edb_b512_4687_b96f_d0c556ef0955 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationData> ;
+                                           skos:prefLabel "EDSMap"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_769aa551_164a_48e4_b63e_c708c5aecbee
+:EMMO_769aa551_164a_48e4_b63e_c708c5aecbee rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparation> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/electrochemistry#electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59>
+                                                           ] ;
+                                           skos:prefLabel "Electropolishing"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An electrochemical process that removes material from a metallic workpiece, reducing the surface roughness by levelling micro-peaks and valleys, improving the surface finish."@en ;
+                                           emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Commonly used for preparing metal TEM samples."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce
+:EMMO_8445ab0a_5b19_4c1d_8066_dd73f7c278ce rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e ;
+                                           skos:altLabel "The characterisation result of an spectroscopy process."@en ;
+                                           skos:prefLabel "Spectrum"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_97d368c5_133a_4d95_8d58_493b4c6e55bd
+:EMMO_97d368c5_133a_4d95_8d58_493b4c6e55bd rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#PreparedSample> ;
+                                           skos:prefLabel "TEMSample"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A sample prepared for TEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_a3938ca9_d477_411b_9aef_44957b1d278c
+:EMMO_a3938ca9_d477_411b_9aef_44957b1d278c rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e ,
+                                                           <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationData> ;
+                                           skos:altLabel "The characterisation result of an imaging process."@en ;
+                                           skos:prefLabel "Image"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_a4241c10_54af_4eed_9ba4_6f1becb3ae24
+:EMMO_a4241c10_54af_4eed_9ba4_6f1becb3ae24 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_04271d77_293d_4bd5_af84_b0d6ded55286 ;
+                                           skos:prefLabel "SPEDImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An image produced by SPED."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_adeeeef2_7dfe_4075_9ab8_04daba6b5452
+:EMMO_adeeeef2_7dfe_4075_9ab8_04daba6b5452 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c ;
+                                           skos:altLabel "BFImage"@en ;
+                                           skos:prefLabel "BrightFieldImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Image produced from bright field imaging."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_b088f2b9_1ca6_452b_8a58_a54f917ec9e2
+:EMMO_b088f2b9_1ca6_452b_8a58_a54f917ec9e2 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c ;
+                                           skos:altLabel "DFImage"@en ;
+                                           skos:prefLabel "DarkFieldImage"@en ,
+                                                          "Image produced from dark field imaging."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_b27794ac_662b_4255_b364_acad4ed531a6
+:EMMO_b27794ac_662b_4255_b364_acad4ed531a6 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d ;
+                                           owl:disjointWith :EMMO_b3eabf9d_b804_4aca_8463_298fcad0def5 ;
+                                           skos:prefLabel "ElectronImaging"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A subclass of imaging where the image is produced by electron."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_b3eabf9d_b804_4aca_8463_298fcad0def5
+:EMMO_b3eabf9d_b804_4aca_8463_298fcad0def5 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d ;
+                                           skos:prefLabel "LightImaging"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A subclass of imaging where the image is produced by photons."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_bbf037c4_2d0a_43bc_9cbd_897dc1d63496
+:EMMO_bbf037c4_2d0a_43bc_9cbd_897dc1d63496 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_adeeeef2_7dfe_4075_9ab8_04daba6b5452
+                                                           ] ;
+                                           skos:prefLabel "BrightFieldImaging"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Simple imaging technique where the image is produced from an unscattered beam."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_c0e1faf2_5e21_4064_b181_c9fcab59e865
+:EMMO_c0e1faf2_5e21_4064_b181_c9fcab59e865 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementProcess> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_fec21a9f_99ed_4d35_b63f_34cac3044cdf
+                                                           ] ;
+                                           skos:prefLabel "DiffractionProcess"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Characterisation process that evaluation of the intensity variation of one or several diffraction peaks of a given phase along a single or multiple sample orientations."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_c891e36d_8f0f_4417_a99c_2eab0f690ee2
+:EMMO_c891e36d_8f0f_4417_a99c_2eab0f690ee2 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_6d52e4e8_8507_4e6c_87ec_64533adec1c0 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_5942f8ee_640a_4a7b_849e_c5ed22fee55c
+                                                           ] ;
+                                           skos:altLabel "A STEM technique which produces an annular dark field image formed by very high angle, incoherently scattered electrons."@en ,
+                                                         "HAADFSTEM"@en ,
+                                                         "HighAngleAnnularDarkFieldScanningTransmissionElectronMicroscopyProcess"@en ;
+                                           skos:prefLabel "HAADF"@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_cbcecf48_040d_403b_b812_047124855553
+:EMMO_cbcecf48_040d_403b_b812_047124855553 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_fec21a9f_99ed_4d35_b63f_34cac3044cdf ;
+                                           skos:prefLabel "SelectedAreaPattern"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A diffraction pattern produced by selected area diffraction."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_cc567c12_0986_471d_87e9_4f43fe1c3d69
+:EMMO_cc567c12_0986_471d_87e9_4f43fe1c3d69 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementProcess> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_39c3815d_8cae_4c8f_b2ff_eeba24bec455 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#EnergyDispersiveXraySpectroscopy>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_6ed54edb_b512_4687_b96f_d0c556ef0955
+                                                           ] ;
+                                           skos:prefLabel "EDSProcess"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Energy Dispersive X-ray Spectrometry (EDS) is a routine technique for determining the elemental makeup and composition of materials in the Scanning or Transmission Electron Microscope (SEM/TEM)."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_ce916202_37bb_4362_a86c_ac9b749f7348
+:EMMO_ce916202_37bb_4362_a86c_ac9b749f7348 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_5cda4466_c377_4f28_8ab3_1041e7826727 ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_3ec4a424_b44f_46bd_8ac2_d6bfbc69b154
+                                                           ] ;
+                                           skos:altLabel "ElectronEnergyLossSpectroscopy"@en ;
+                                           skos:prefLabel "EELS"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A spectroscopy process where a spectrum is aquired of the energy that the beam looses when passing through the sample."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_d09ddf4a_357d_4692_bc57_5b1cfac10217
+:EMMO_d09ddf4a_357d_4692_bc57_5b1cfac10217 rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Polishing>
+                                                                               <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparationByCutting>
+                                                                             )
+                                                               ] ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparation> ;
+                                           skos:prefLabel "CuttingAndPolishing"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Sample preparation step combining cutting and polishing."@en ;
+                                           emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "This class helps increasing the granularity and simplify the documentation of the sample preparation."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_ec3cd8b8_3934_4426_8175_012a9c6bbd24
+:EMMO_ec3cd8b8_3934_4426_8175_012a9c6bbd24 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementProcess> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom :EMMO_f8e338b7_66b0_4cd6_9c7e_759fda850e48
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_39c3815d_8cae_4c8f_b2ff_eeba24bec455 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#ScanningElectronMicroscopy>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_6567dbdc_d049_4bc6_8076_cb1e0c007348
+                                                           ] ;
+                                           skos:prefLabel "SEMCharacterisation"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A characterisation process performed by scanning electron microscopy."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_f840ce1c_9f74_4a22_a305_30b82e2a3cb5
+:EMMO_f840ce1c_9f74_4a22_a305_30b82e2a3cb5 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementProcess> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
+                                                             owl:someValuesFrom :EMMO_97d368c5_133a_4d95_8d58_493b4c6e55bd
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_39c3815d_8cae_4c8f_b2ff_eeba24bec455 ;
+                                                             owl:someValuesFrom <https://w3id.org/emmo/domain/characterisation-methodology/chameo#TransmissionElectronMicroscopy>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_f92e72fc_598b_4d67_8db9_3b659213c995
+                                                           ] ;
+                                           skos:prefLabel "TEMCharacterisaion"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A characterisation process performed by transmission electron microscopy."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_f8e338b7_66b0_4cd6_9c7e_759fda850e48
+:EMMO_f8e338b7_66b0_4cd6_9c7e_759fda850e48 rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#PreparedSample> ;
+                                           skos:prefLabel "SEMSample"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A sample prepared for SEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_f92e72fc_598b_4d67_8db9_3b659213c995
+:EMMO_f92e72fc_598b_4d67_8db9_3b659213c995 rdf:type owl:Class ;
+                                           rdfs:subClassOf :EMMO_a3938ca9_d477_411b_9aef_44957b1d278c ;
+                                           skos:prefLabel "TEMImage"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An image produced by TEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_fec21a9f_99ed_4d35_b63f_34cac3044cdf
+:EMMO_fec21a9f_99ed_4d35_b63f_34cac3044cdf rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_0f6f0120_c079_4d95_bb11_4ddee05e530e ,
+                                                           <https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationData> ;
+                                           skos:altLabel "The characterisation result of an diffraction process."@en ;
+                                           skos:prefLabel "DiffractionPattern"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

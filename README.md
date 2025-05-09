@@ -1,10 +1,11 @@
-# Microscopy Domain Ontology (MDO)
-This is a general domain ontology for microscopy, with specialised branches for
-- Transmission Electron Microscopy
-- Scanning Electron Microscopy
-- Light Microscopy
+# Domain Ontology for Microscopy (DOM)
+A domain ontology for microscopy that has a special focus on Transmission Electron Microscopy, Scanning Electron Microscopy and Light Microscopy.
 
-Initially it will focus on techniques.
+This ontology builds on CHAMEO, and extends the following branches with specialised classes for microscopy:
+- characterisation processes
+- sample preparation processes
+- image processing processes
+- measurement results
 
 
 ### Imported ontologies
