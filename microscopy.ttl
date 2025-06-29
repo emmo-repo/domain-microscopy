@@ -26,6 +26,19 @@
                                            owl:versionInfo "0.0.1"@en .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_0416b41d_efa4_4497_83b0_5f996d6a1887
+:EMMO_0416b41d_efa4_4497_83b0_5f996d6a1887 rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf emmo:EMMO_7ee1c29c_c453_4ad8_96d4_5103229fa60d ;
+                                           rdfs:domain <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample> ;
+                                           rdfs:range <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Operator> ;
+                                           rdfs:comment "Relates a sample to the operator that has studied it."@en ;
+                                           skos:prefLabel "studiedBy"@en .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -53,6 +66,18 @@
                                            rdfs:subClassOf :EMMO_f92e72fc_598b_4d67_8db9_3b659213c995 ;
                                            skos:prefLabel "STEMImage"@en ;
                                            emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An image produced by STEM."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_1c0573d9_bdfc_4f03_8486_2c3c1317b6dd
+:EMMO_1c0573d9_bdfc_4f03_8486_2c3c1317b6dd rdf:type owl:Class ;
+                                           rdfs:subClassOf emmo:EMMO_3528547f_cefe_4f24_bc46_936b39f711eb ,
+                                                           <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparation> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_bbd20bef_2960_4485_aa44_d58cf3dc590e
+                                                           ] ;
+                                           skos:prefLabel "ThermomechanicalSamplePreparation"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Thermomechanical sample preparation."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_23ec1502_2979_4866_bfcd_c22acf97097d
@@ -159,6 +184,10 @@
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty emmo:EMMO_36e69413_8c59_4799_946c_10b05d266e22 ;
                                                              owl:someValuesFrom <https://w3id.org/emmo/domain/electrochemistry#electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_b73e8934_3fa3_432d_a08a_7b7346b2c52e
                                                            ] ;
                                            skos:prefLabel "Electropolishing"@en ;
                                            emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An electrochemical process that removes material from a metallic workpiece, reducing the surface roughness by levelling micro-peaks and valleys, improving the surface finish."@en ;
@@ -223,6 +252,20 @@
                                            rdfs:subClassOf :EMMO_42063fa6_ef3b_4cfe_9552_1fe19daa651d ;
                                            skos:prefLabel "LightImaging"@en ;
                                            emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A subclass of imaging where the image is produced by photons."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_b73e8934_3fa3_432d_a08a_7b7346b2c52e
+:EMMO_b73e8934_3fa3_432d_a08a_7b7346b2c52e rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample> ;
+                                           skos:prefLabel "ElectropolishedSample"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A sample after electropolishing."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_bbd20bef_2960_4485_aa44_d58cf3dc590e
+:EMMO_bbd20bef_2960_4485_aa44_d58cf3dc590e rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample> ;
+                                           skos:prefLabel "ThermomechanicalTreatedSample"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A sample after thermomechanical treatment."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_bbf037c4_2d0a_43bc_9cbd_897dc1d63496
@@ -309,10 +352,21 @@
                                                                                <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparationByCutting>
                                                                              )
                                                                ] ;
-                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparation> ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparation> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty emmo:EMMO_c4bace1d_4db0_4cd3_87e9_18122bae2840 ;
+                                                             owl:someValuesFrom :EMMO_d7483484_d9a0_4a97_aa48_232f4f11ac2a
+                                                           ] ;
                                            skos:prefLabel "CuttingAndPolishing"@en ;
                                            emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Sample preparation step combining cutting and polishing."@en ;
                                            emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "This class helps increasing the granularity and simplify the documentation of the sample preparation."@en .
+
+
+###  https://w3id.org/emmo/domain/microscopy#EMMO_d7483484_d9a0_4a97_aa48_232f4f11ac2a
+:EMMO_d7483484_d9a0_4a97_aa48_232f4f11ac2a rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Sample> ;
+                                           skos:prefLabel "CuttedAndPolishedSample"@en ;
+                                           emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A sample after cutting and polishing."@en .
 
 
 ###  https://w3id.org/emmo/domain/microscopy#EMMO_ec3cd8b8_3934_4426_8175_012a9c6bbd24
