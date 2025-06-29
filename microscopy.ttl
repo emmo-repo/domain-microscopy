@@ -10,9 +10,8 @@
 @base <https://w3id.org/emmo/domain/microscopy#> .
 
 <https://w3id.org/emmo/domain/microscopy> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.0.1> ;
-                                           owl:imports <https://w3id.org/emmo/1.0.0> ,
-                                                       <https://w3id.org/emmo/domain/characterisation-methodology/1.0.0/chameo> ;
+                                           owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.0.2> ;
+                                           owl:imports <https://w3id.org/emmo/domain/characterisation-methodology/1.0.0/chameo> ;
                                            dcterms:contributor "MatCHMaker"@en ,
                                                                "SFI PhysMet"@en ;
                                            dcterms:creator "Elisabeth Thronsen (SINTEF)"@en ,
@@ -23,7 +22,7 @@
                                            dcterms:title "Microstructure domain ontology"@en ;
                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "dom" ;
                                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/emmo/domain/microscopy" ;
-                                           owl:versionInfo "0.0.1"@en .
+                                           owl:versionInfo "0.0.2"@en .
 
 #################################################################
 #    Object Properties
