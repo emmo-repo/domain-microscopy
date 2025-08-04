@@ -1,15 +1,15 @@
 name: CI tests
 on: [push]
 
-env:
-  ONTOLOGY_NAME: microscopy
-
 jobs:
   ci_testing:
     concurrency: ci-${{ github.ref }}  # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set environment
+      run: cat .github/env >> $GITHUB_ENV
+
     - name: Checkout
       uses: actions/checkout@v4
 
