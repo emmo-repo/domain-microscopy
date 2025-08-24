@@ -30,7 +30,7 @@ The initial intended use cases for DOM are Transmission Electron Microscopy, Sca
     dcterms:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
     dcterms:mediator emmo:EMMC_ASBL ;
     dcterms:modified "2025-08-24"^^xsd:date ;
-    dcterms:publisher <https://he-matchmaker.eu> <https://www.ntnu.edu/physmet> ;
+    dcterms:publisher <https://he-matchmaker.eu>, <https://www.ntnu.edu/physmet> ;
     dcterms:source <https://he-matchmaker.eu> <https://www.ntnu.edu/physmet> ;
     dcterms:title "Domain Ontology for Microscopy (DOM)"@en ;
     bibo:bibliographicCitation <https://doi.org/10.5281/zenodo.15767873> ;
