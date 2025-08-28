@@ -5,7 +5,7 @@ on:
     types: [published]
 
 env:
-  ONTOLOGY_NAME: concrete
+  ONTOLOGY_NAME: microscopy
   TAG: ${{ github.ref_name }}
 
 permissions:
