@@ -21,6 +21,8 @@ This ontology builds on CHAMEO, and extends the following branches with speciali
 - image processing processes
 - measurement results
 
+Based on DOM, specialised sub-domain ontologies for [TEM] and [SEM] are under development.
+
 
 ### Imported ontologies
 Version dependencies on imported ontologies:
@@ -47,3 +49,5 @@ This work has been supported by the following projects:
 
 [EMMO]: https://github.com/emmo-repo/EMMO
 [CHAMEO]: https://github.com/emmo-repo/domain-characterisation-methodology
+[TEM]: https://github.com/TEM-Gemini-Centre/TEMGeminiOntology
+[SEM]: https://github.com/emmo-repo/domain-concrete/blob/master/sem.ttl
