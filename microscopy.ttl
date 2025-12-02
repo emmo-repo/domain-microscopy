@@ -14,8 +14,8 @@
 
 <https://w3id.org/emmo/domain/microscopy>
     rdf:type owl:Ontology ;
-    owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.5.3> ;
-    owl:imports <https://w3id.org/emmo/domain/microscopy/0.5.3/contributors> ;
+    owl:versionIRI <https://w3id.org/emmo/domain/microscopy/0.6.0-beta> ;
+    owl:imports <https://w3id.org/emmo/domain/microscopy/0.6.0-beta/contributors> ;
     dcterms:abstract """The Domain Ontology for Microscopy (DOM) is an EMMO-based domain ontology that extends the Characterisation Methodology Domain Ontology (CHAMEO) with concepts dedicated to microscopy. It extends following branches in CHAMEO with specialised classes for microscopy:
   - characterisation processes
   - sample preparation processes
@@ -24,8 +24,14 @@
 The initial intended use cases for DOM are Transmission Electron Microscopy, Scanning Electron Microscopy and Light Microscopy.
 """@en ;
     dcterms:created "2025-03-09"^^xsd:date ;
-    dcterms:contributor emmo:FrancescaBleken ;
-    dcterms:creator :ElisabethThorsen, :SigurdWenner, :IngaKonow, emmo:JesperFriis ;
+    dcterms:contributor
+        <https://orcid.org/0000-0001-8869-3718> ;
+    dcterms:creator
+        <https://orcid.org/0000-0002-1560-809X> ,
+        <https://orcid.org/0000-0003-0845-0287> ,
+        <https://orcid.org/0000-0001-5142-2199> ,
+        <https://orcid.org/0000-0002-9153-9866> ,
+        <https://www.ntnu.no/ansatte/inga.konow> ;
     dcterms:issued "2025-03-09"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
     dcterms:mediator emmo:EMMC_ASBL ;
@@ -38,7 +44,8 @@ The initial intended use cases for DOM are Transmission Electron Microscopy, Sca
     bibo:status "unstable" ;
     vann:preferredNamespacePrefix "dom" ;
     vann:preferredNamespaceUri "https://w3id.org/emmo/domain/microscopy" ;
-    owl:versionInfo "0.5.3"@en .
+    owl:priorVersion "0.5.3"@en ;
+    owl:versionInfo "0.6.0-beta"@en .
 
 #################################################################
 #    Object Properties
