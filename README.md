@@ -27,11 +27,12 @@ Based on DOM, specialised sub-domain ontologies for [TEM] and [SEM] are under de
 ### Imported ontologies
 Version dependencies on imported ontologies:
 
-| Version | [EMMO] | [CHAMEO] |
-|---------|--------|----------|
-| 0.0.1   | 1.0.0  | 1.0.0    |
-| 0.0.2   | 1.0.0  | 1.0.0    |
-| 0.5.3   | 1.0.0  | 1.0.0    |
+| Version    | [EMMO] | [CHAMEO] | Status      |
+|------------|--------|----------|-------------|
+| 0.0.1      | 1.0.0  | 1.0.0    | stable      |
+| 0.0.2      | 1.0.0  | 1.0.0    | stable      |
+| 0.5.3      | 1.0.0  | 1.0.0    | stable      |
+| 0.6.0-beta | 1.0.2  | 1.0.2    | development |
 
 
 ## License
